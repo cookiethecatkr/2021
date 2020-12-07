@@ -36,3 +36,4 @@ sudo systemctl disablemetricbeat
 sudo systemctl status metricbeat
 journalctl -u metricbeat.service 
 metricbeat setup -e 
+metricbeat modules enable googlecloud
