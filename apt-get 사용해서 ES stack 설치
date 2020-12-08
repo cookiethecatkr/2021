@@ -32,7 +32,7 @@ sudo apt-get update && sudo apt-get install metricbeat
 sudo systemctl start metricbeat
 sudo systemctl stop metricbeat
 sudo systemctl enable metricbeat
-sudo systemctl disablemetricbeat
+sudo systemctl disable metricbeat
 sudo systemctl status metricbeat
 journalctl -u metricbeat.service 
 metricbeat setup -e 
