@@ -39,3 +39,9 @@ journalctl -f
 journalctl -f -u kibana.service
 metricbeat setup -e 
 metricbeat modules enable googlecloud
+
+#elasticsearch.yml
+network.host: 0.0.0.0
+http.port: 9200
+transport.host: localhost
+transport.tcp.port: 9300
