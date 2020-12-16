@@ -1,0 +1,37 @@
+cluster.name: cookiethecat2020
+node.name: es-cluster001
+node.master: true   / node.data: true 
+network.host: 10.178.0.36
+http.port: 9200
+discovery.seed.host: ["ip","ip"]
+seed_providers: gce
+cloud:
+  gce:
+      project_id: es-cloud
+      zone: europe-west1-a
+discovery:
+      seed_providers: gce
+
+
+#GCE Discovery Plugin 
+cd /usr/share/elasticsearch/bin
+sudo bin/elasticsearch-plugin install discovery-gce
+service elasticsearch start
+
+https://www.elastic.co/guide/en/elasticsearch/plugins/current/discovery-gce-network-host.html
+
+# check
+curl -XGET 'http://localhost:9200/_cluster/state?pretty'
+
+# 1
+cluster.name: cookiethecat2020
+node.name: es-cluster001
+node.master: true
+network.host: _gce_
+http.port: 9200
+cloud:
+  gce:
+      project_id: dateam
+      zone: asia-northeast3-a
+discovery:
+      seed_providers: gce
