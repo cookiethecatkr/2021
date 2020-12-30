@@ -1,7 +1,7 @@
 resource "google_compute_instance" "jin" {
   project      = "gp-training"
   name         = "cookiethecat"
-  machine_type = "n1-standard-1"
+  machine_type = "n1-standard-2"
   allow_stopping_for_update = true 
   desired_status = "RUNNING"
   zone         = "asia-northeast3-a"
