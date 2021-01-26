@@ -1,0 +1,21 @@
+public int solution(int N) {
+        String b = Integer.toBinaryString(N);        //  9 -> 1001   , 10010001
+        
+        int start = 0;
+        int end = 0;
+
+        start = b.indexOf("1");        // 0 
+        end = b.lastIndexOf("1");      //3
+        
+        String nb = b.substring(start, end + 1);     // 1001    ,  10010001
+
+        String[] split = nb.split("1");   //00, 000 
+        
+        int answer = 0;
+        for (String s : split){
+            if(s.length() > answer){
+                answer = s.length();
+            }
+        }
+        return answer;
+    }
