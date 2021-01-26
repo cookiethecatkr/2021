@@ -1,3 +1,5 @@
+# Iteration 
+
 public int solution(int N) {
         String b = Integer.toBinaryString(N);        //  9 -> 1001   , 10010001  , 100000
         
