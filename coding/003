@@ -1,0 +1,21 @@
+public int solution(int[] A) {
+        int answer = 0; 
+        Map<Integer, Integer> resultMap = new HashMap();
+        
+        for ( int i =0; i < A.length; i++) {
+            if(resultMap.containsKey(A[i])){
+                resultMap.put(A[i], resultMap.get(A[i]) + 1);
+            } else {
+                resultMap.put(A[i], 1);
+            }
+        }
+        
+        for(Map.Entry<Integer, Integer> entry : resultMap.entrySet()){
+            if(entry.getValue() % 2 !=0) {
+                answer = entry.getKey();
+                break;
+            }
+        }
+       
+        return answer;  
+    }
