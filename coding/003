@@ -1,3 +1,5 @@
+# Arrays - OddOccurrencesInArray 
+
 public int solution(int[] A) {
         int answer = 0; 
         Map<Integer, Integer> resultMap = new HashMap();
