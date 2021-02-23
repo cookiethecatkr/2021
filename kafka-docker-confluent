@@ -12,3 +12,10 @@ sudo docker ps
 sudo docker-compose ps
 netstat -ntlp
 
+### sudo docker exec -it --user root  broker bash
+#install vim in docker
+apt-get update
+apt-get install vim
+
+yum update
+yum install vim
