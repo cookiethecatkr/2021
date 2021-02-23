@@ -1,0 +1,14 @@
+## Kafka Docker Confluent Platform 
+https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html?utm_medium=sem&utm_source=google&utm_campaign=ch.sem_br.nonbrand_tp.prs_tgt.kafka_mt.xct_rgn.apac_lng.eng_dv.all&utm_term=kafka%20docker&creative=&device=c&placement=&gclid=Cj0KCQiA7NKBBhDBARIsAHbXCB5kGK82JS1PCvOKzPQbCmsqs5p3MLF7g_VlPe9PcATUAI1d6d3am-YaArSEEALw_wcB
+
+## Docker on Debian install
+https://docs.docker.com/engine/install/debian/
+
+## Docker Compose 
+https://docs.docker.com/compose/install/
+
+# to verify that services are up and running 
+sudo docker ps
+sudo docker-compose ps
+netstat -ntlp
+
