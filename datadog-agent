@@ -23,3 +23,19 @@ sudo docker exec -it dd-agent bash
 
 $ JMX_PORT=9999 ./kafka-server-start.sh ../config/server.properties
 https://medium.com/@abdullahtrmn/enable-kafka-jmx-port-53bc95271e12
+
+1. Add JMX_PORT to environment variables.
+Please go to KAFKA_HOME and change to bin directory. Open kafka-server-start.sh script. Add this below line before “exec $base_dir/kafka-run-class.sh $EXTRA_ARGS kafka.Kafka “$@”
+export JMX_PORT=9999
+
+2. Open kafka-run-class.sh and search like “JMX” in that script. Please replace JMX SETTINGS and JMX PORT TO USE sections with below lines. Please replace `localhost` with your broker listener address.
+# JMX settings
+if [ -z "$KAFKA_JMX_OPTS" ]; then
+  KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Djava.net.preferIPv4Stack=true"
+fi
+# JMX port to use
+if [  $JMX_PORT ]; then
+  KAFKA_JMX_OPTS="$KAFKA_JMX_OPTS -Dcom.sun.management.jmxremote.port=$JMX_PORT"
+fi
+
+3. Restart Kafka Broker. If you have Kafka Cluster, please prefer the restart one by one. After restarted, You can get monitoring metrics with enabled JMX_PORT.
