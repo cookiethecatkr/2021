@@ -1,0 +1,25 @@
+sudo systemctl stop kibana.service
+
+sudo systemctl start elasticsearch.service
+
+sudo systemctl restart datadog-agent
+
+sudo datadog-agent status
+
+
+
+sudo docker exec dd-agent service datadog-agent info
+
+sudo docker logs dd-agent
+
+sudo docker restart dd-agent
+
+sudo docker exec -it <CONTAINER_NAME> agent status
+sudo docker exec -it dd-agent agent status
+
+sudo docker exec -it dd-agent bash
+
+- kafka 
+
+$ JMX_PORT=9999 ./kafka-server-start.sh ../config/server.properties
+https://medium.com/@abdullahtrmn/enable-kafka-jmx-port-53bc95271e12
