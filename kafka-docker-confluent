@@ -10,6 +10,7 @@ https://docs.docker.com/compose/install/
 # to verify that services are up and running 
 sudo docker ps
 sudo docker-compose ps
+sudo watch docker-compose ps 
 netstat -ntlp
 
 ### sudo docker exec -it --user root  broker bash
