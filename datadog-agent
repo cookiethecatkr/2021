@@ -6,8 +6,6 @@ sudo systemctl restart datadog-agent
 
 sudo datadog-agent status
 
-
-
 sudo docker exec dd-agent service datadog-agent info
 
 sudo docker logs dd-agent
@@ -18,6 +16,21 @@ sudo docker exec -it <CONTAINER_NAME> agent status
 sudo docker exec -it dd-agent agent status
 
 sudo docker exec -it dd-agent bash
+
+# to verify that services are up and running 
+sudo docker ps
+sudo docker-compose ps
+sudo watch docker-compose ps 
+netstat -ntlp
+
+### sudo docker exec -it --user root  broker bash
+#install vim in docker
+apt-get update
+apt-get install vim
+
+yum update
+yum install vim
+
 
 - kafka 
 
