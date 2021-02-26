@@ -1,10 +1,11 @@
 sudo systemctl stop kibana.service
-
 sudo systemctl start elasticsearch.service
 
-sudo systemctl restart datadog-agent
+sudo systemctl restart datadog-agent (CentOS) 
+sudo service datadog-agent restart (Debian, ubuntu) 
 
 sudo datadog-agent status
+sudo service datadog-agent status
 
 sudo docker exec dd-agent service datadog-agent info
 
