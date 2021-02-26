@@ -6,6 +6,8 @@ https://docs.docker.com/engine/install/debian/
 
 ## Docker Compose 
 https://docs.docker.com/compose/install/
+sudo docker-compose up -d
+sudo docker-compose stop && sudo docker-compose rm -f
 
 # to verify that services are up and running 
 sudo docker ps
@@ -17,7 +19,6 @@ netstat -ntlp
 #install vim in docker
 apt-get update
 apt-get install vim
-
 yum update
 yum install vim
 
