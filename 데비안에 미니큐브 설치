@@ -27,6 +27,11 @@ minikube start
 minikube version 
 minikube kubectl -- get pods -A
 
+kubectl create deployment minikube-test --image=nginx:latest
+kubectl get deployment
+kubectl get po
+kubectl get pod
+kubectl get pods
 
 ### kubctl 설치  
 ### https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
