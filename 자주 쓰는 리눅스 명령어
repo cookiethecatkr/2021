@@ -1,0 +1,4 @@
+useradd <사용자>
+passwd --stdin <사용자>
+echo "kube ALL=(ALL) ALL" >> /etc/sudoers.d/<사용자>
+su - <사용자> 
