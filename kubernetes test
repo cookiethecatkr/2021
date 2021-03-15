@@ -1,3 +1,5 @@
+#https://www.qwiklabs.com/focuses/878?catalog_rank=%7B%22rank%22%3A33%2C%22num_filters%22%3A1%2C%22has_search%22%3Atrue%7D&parent=catalog&search_id=9299421
+
 kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
 
 kubectl expose deployment hello-server --type=LoadBalancer --port 8080
