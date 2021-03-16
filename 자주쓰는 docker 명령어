@@ -1,1 +1,10 @@
+docker run -it ubuntu   # -it 안 붙이면 컨테이너 실행 안됨. 왜? 
+#exit, ctrl + D  컨테이너 정지됨, ctrl + P, Q 는 컨테이너 쉘만 나옴. 
 
+docker create -it --name centos centos:7  # -it 안 붙이면 생성되도 start 하면 안되는 듯. 왜? ㅇ
+docker start centos
+docker attach centos 
+# run = create + start 
+
+docker rm -f <container> 
+docker system prune 
