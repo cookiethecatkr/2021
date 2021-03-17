@@ -8,3 +8,4 @@ docker attach centos
 
 docker rm -f <container> 
 docker system prune 
+
